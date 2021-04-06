@@ -7,17 +7,18 @@ li {
 }
 
 a {
+    color: rgb(139, 139, 139);
     text-decoration: none;
 }
 
-li {
-    margin: 0 0 20px 20px;
-    list-style-type: none;
-}
-
-li:hover {
+a:hover {
     color: rgb(7, 189, 31);
     cursor: pointer;
+}
+
+li {
+    margin: 0 0 15px 20px;
+    list-style-type: none;
 }
 
 span {
@@ -27,8 +28,8 @@ span {
 body {
     text-transform: lowercase;
     font-family: 'Inconsolata', monospace;
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,185,27,1) 48%, rgba(0,0,0,1) 100%);
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 185, 27, 1) 48%, rgba(0, 0, 0, 1) 100%);
 }
 
 header {
@@ -37,6 +38,24 @@ header {
     align-items: center;
     flex-direction: column;
     justify-content: center;
+}
+
+main {
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+}
+
+main>section {
+    width: 400px;
+    height: 420px;
+    margin: 40px;
+    border: 1px solid white;
+    background-color: black;
+}
+
+main>section:hover {
+    transform: scale(1.1);
 }
 
 h1,
@@ -50,17 +69,17 @@ h4 {
 }
 
 footer {
-    margin: 50px 0 20px 0;
+    margin: 40px 0 20px 0;
     text-align: center;
 }
 
-footer>a {
-    margin: 5px;
+footer>nav>a {
+    margin: 10px;
     color: white;
-    font-size: 15px;
+    font-size: 16px;
 }
 
-footer>a:hover {
+footer>nav>a:hover {
     color: rgb(7, 189, 31);
     cursor: pointer;
     background-color: black;
@@ -138,7 +157,7 @@ footer>a:hover {
 
     100% {
         left: calc(100% - 100px);
-        bottom: 60%;
+        bottom: 58%;
     }
 }
 
@@ -159,25 +178,6 @@ footer>a:hover {
 
     100% {
         right: calc(100% - 100px);
-        bottom: 60%;
+        bottom: 58%;
     }
-}
-
-#col-container {
-    width: 1000px;
-    display: flex;
-    justify-content: space-between;
-    /* border: 1px solid white; */
-}
-
-.col {
-    width: 300px;
-    height: 420px;
-    margin: 50px;
-    border: 1px solid white;
-    background-color: black;
-}
-
-.col:hover {
-    transform: scale(1.15);
 }
