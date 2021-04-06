@@ -15,8 +15,7 @@ li {
     list-style-type: none;
 }
 
-li:hover,
-footer>a:hover {
+li:hover {
     color: rgb(7, 189, 31);
     cursor: pointer;
 }
@@ -62,6 +61,8 @@ footer>a {
 }
 
 footer>a:hover {
+    color: rgb(7, 189, 31);
+    cursor: pointer;
     background-color: black;
     border: 1px solid white;
 }
