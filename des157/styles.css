@@ -28,8 +28,8 @@ span {
 body {
     text-transform: lowercase;
     font-family: 'Inconsolata', monospace;
-    background-color: black;
-    background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%);
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,185,27,1) 48%, rgba(0,0,0,1) 100%);
 }
 
 header {
