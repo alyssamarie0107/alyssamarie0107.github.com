@@ -126,14 +126,14 @@ footer>a {
     }
 
     75% {
-		left: calc(55% - 100px);
-		bottom: 0; 
-	}
+        left: calc(55% - 100px);
+        bottom: 0;
+    }
 
-	100% {
-		left: calc(100% - 100px);
-		bottom: 60%; 
-	}
+    100% {
+        left: calc(100% - 100px);
+        bottom: 60%;
+    }
 }
 
 @keyframes animation2 {
@@ -147,14 +147,14 @@ footer>a {
     }
 
     75% {
-		right: calc(55% - 100px);
-		bottom: 0; 
-	}
+        right: calc(55% - 100px);
+        bottom: 0;
+    }
 
-	100% {
-		right: calc(100% - 100px);
-		bottom: 60%; 
-	}
+    100% {
+        right: calc(100% - 100px);
+        bottom: 60%;
+    }
 }
 
 
