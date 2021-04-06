@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,39 +10,80 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <!-- google font-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
-    <!-- my stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
 </head>
 
 <body>
-    <div id = "container">
-        <!-- time-based interactive banner -->
-        <div id = "banner"></div>
-        <div id = "intro">
-            <h1>Alyssa Rodriguez</h1>
-            <h2>Des157A: Interactive Media II - Spring 2021</h2>
-        </div>
+    <div id="container">
+        <header>
+            <!-- UI/UX tip: It is important to include page identification (name) and purpose (DES 157) within the top 300px or so of any website. -->
+            <section id="intro">
+                <h1>Alyssa Rodriguez</h1>
+                <hr/>
+                <h2>Des157A: Interactive Media ii - Spring 2021</h2>
+            </section>
+            <!-- time-based interactive banner -->
+            <div id="banner">
+                <div class = "square" id = "square1"></div>
+                <div class = "square" id = "square2"></div>
+            </div>
+        </header>
         <main>
-            <div id = "col-container">
-                <div class = "col" id = "col1">
-                    <h3>Studios</h3>
-                    <h3>Experiments</h3>
+            <div id="col-container">
+                <div class="col" id="col1">
+                    <h2>Studios</h2>
+                    <ul>
+                        <li> > Mad Libs 2.0</li>
+                        <a href=""></a>
+                        <li> > Every Picture</li>
+                        <a href=""></a>
+                        <li> > Game On!</li>
+                        <a href=""></a>
+                    </ul>
+                    <h2>Experiments</h2>
+                    <ul>
+                        <li> > Exp 1.</li>
+                        <a href=""></a>
+                    </ul>
+                    <h2>Writing</h2>
+                    <ul>
+                        <li> > Learning Journal</li>
+                        <a href=""></a>
+                    </ul>
                 </div>
-                <div class = "col" id = "col2">
-                    <h3>R & D</h3>
+                <div class="col" id="col2">
+                    <h2>R & D</h2>
+                    <ul>
+                        <li> > Project Brief</li>
+                        <a href=""></a>
+                        <li> > Digital Comp</li>
+                        <a href=""></a>
+                        <li> > Refined Comp</li>
+                        <a href=""></a>
+                        <li> > Prototype 1</li>
+                        <a href=""></a>
+                        <li> > User Test</li>
+                        <a href=""></a>
+                        <li> > User Test Results</li>
+                        <a href=""></a>
+                    </ul>
                 </div>
-                <div class = "col" id = "col3">
-                    <h3>Final</h3>
+                <div class="col" id="col3">
+                    <h2>Final</h2>
+                    <ul>
+                        <li> > Final Project</li>
+                        <a href=""></a>
+                    </ul>
                 </div>
             </div>
         </main>
         <footer>
-            <a href = "mailto:amrrodriguez@ucdavis.edu">Email: amrrodriguez@ucdavis.edu</a>
+            <a href="mailto:amrrodriguez@ucdavis.edu">Email: amrrodriguez@ucdavis.edu</a>
             <span>|</span>
-            <a href = "https://validator.w3.org/">Valid HTML</a>
+            <a href="https://validator.w3.org/check?uri=referer">Valid HTML 5</a>
             <span>|</span>
-            <a href = "https://jigsaw.w3.org/css-validator/">Valid CSS</a>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
         </footer>
     </div>
 </body>
