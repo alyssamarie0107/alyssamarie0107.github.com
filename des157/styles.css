@@ -21,9 +21,7 @@ li {
     list-style-type: none;
 }
 
-span {
-    color: white;
-}
+span {color: white;}
 
 body {
     text-transform: lowercase;
@@ -104,9 +102,7 @@ footer>nav>a:hover {
     text-align: center;
 }
 
-#intro>h1 {
-    font-size: 55px;
-}
+#intro>h1 {font-size: 55px;}
 
 #banner {
     width: 1100px;
@@ -115,6 +111,8 @@ footer>nav>a:hover {
     border: 1px solid white;
     background-color: black;
 }
+
+#banner:hover .square {display: none;}
 
 .square {
     width: 100px;
@@ -139,6 +137,39 @@ footer>nav>a:hover {
     right: 0;
     animation: animation2 6s linear infinite alternate;
 }
+
+#screen-crash {
+    width: 1100px;
+    height: 250px;
+    display: flex;
+
+}
+
+#banner:hover .rec {width: 1.5px;}
+
+.rec {
+    width: 0;
+    height: 248px;
+    margin:1.5px;
+}
+
+#rec1 {
+    margin-left: 45px;
+    background-color: hotpink;
+}
+
+#rec2 {background-color: blue;}
+#rec3 {background-color: red;}
+#rec4 {background-color: greenyellow;}
+#rec5 {background-color: darkcyan;}
+#rec6 {background-color: yellow;}
+
+#rec7 {
+    margin-left: 60px;
+    background-color: purple;
+}
+
+#rec8 {background-color: turquoise;}
 
 @keyframes animation1 {
     0% {
