@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Experimentation</title>
+</head>
+
+<body>
+    <h1>Experiment 1</h1>
+    <h2>Open console to see code functionaility!</h2>
+
+    <script>
+        /*
+            a program that outputs a triangle made of the "star" symbol (*) based on 
+            how many rows the user inputs. 
+        */
+        var star = "*";
+        var triangle = "";
+        var userRows = prompt("Enter the number of rows", "");
+        var numOfRows = parseInt(userRows) + 1; // convert userRows to integer using parseInt()
+
+        for(var i = 1; i < numOfRows; i++) {
+            for(var j = i; j <= i; j++) {
+                triangle += star;
+                console.log(triangle);
+            }
+        }
+    </script>
+
+</body>
+
+</html>
