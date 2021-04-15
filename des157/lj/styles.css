@@ -2,6 +2,20 @@ h1 {margin: 0;}
 
 a {text-decoration: none;}
 
+p {
+    width: 7in;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    font-family: sans-serif;
+}
+
+p>a {
+    color: #333;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 body {
     background-color: #D9D9D9;
     font-family: 'Montserrat', sans-serif;
@@ -16,7 +30,6 @@ header>h1 {
 }
 
 main {
-    width: 1000px;
     display: flex;
     flex-direction: column;
 }
@@ -42,7 +55,6 @@ footer>nav>a {
     color: #333;
     display: flex;
     max-width: 1366px;
-    min-width: 900px;
     margin: 1em auto;
     align-items: center;
     flex-direction: column;
@@ -112,17 +124,4 @@ footer>nav>a {
 .date {
     font-size: 14px;
     text-transform: uppercase;
-}
-
-.review {
-    font-size: 14px;
-    line-height: 1.5;
-    letter-spacing: 0.5px;
-    font-family: sans-serif;
-}
-
-.review>a {
-    color: #333;
-    font-weight: bold;
-    text-decoration: underline;
 }
