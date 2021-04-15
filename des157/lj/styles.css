@@ -1,6 +1,6 @@
-h1 {
-    margin: 0;
-}
+h1 {margin: 0;}
+
+a {text-decoration: none;}
 
 body {
     background-color: #D9D9D9;
@@ -10,7 +10,7 @@ body {
 header>h1 {
     color: #353D40;
     text-align: center;
-    letter-spacing: 3.5px;
+    letter-spacing: 2.5px;
     text-transform: uppercase;
     margin: 30px 0 50px 0;
 }
@@ -34,7 +34,6 @@ footer {
 footer>nav>a {
     color: #333;
     font-size: 14px;
-    text-decoration: none;
     text-transform: uppercase;
 }
 
@@ -120,4 +119,10 @@ footer>nav>a {
     line-height: 1.5;
     letter-spacing: 0.5px;
     font-family: sans-serif;
+}
+
+.review>a {
+    color: #333;
+    font-weight: bold;
+    text-decoration: underline;
 }
