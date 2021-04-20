@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Experimentation - Functions & DOM</title>
+    <style>
+        p {
+            text-align: center;
+        }
+
+        #container {
+            width: 300px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #before-container,
+        #after-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #before,
+        #after {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Experiment 2</h1>
+    <div id="container">
+        <div id="before-container">
+            <div id="before"></div>
+            <p>Before</p>
+            <p>Color: black</p>
+        </div>
+        <div id="after-container">
+            <div id="after"></div>
+            <p>After</p>
+            <p id="after-color"></p>
+        </div>
+    </div>
+    
+    <script>
+        /*
+            this program first prompts the user for a color as input.
+            if the user enters a color, the program then displays a 
+            before and after of two circles. The before circle has the default
+            color (black) and the after circle has the color the user enters.
+
+            if the user does not enter anything, then the after circle has the
+            default color and shows a little error message that indicates that
+            the user did not enter a color. 
+        */
+        (function(){
+            'use strict';
+            let colorInput = prompt("Enter a color:", "");
+            
+            function changeColor(color) {
+                const after = document.querySelector('#after');
+                after.style.backgroundColor = color;
+            }
+
+            function inputCheck(color){
+                let message;
+                const afterColor = document.querySelector('#after-color');
+                if(color == null || color == "") {
+                    afterColor.innerHTML = `!Enter a color`;
+                    afterColor.style.color = "red";
+                }
+                else {
+                    changeColor(color)
+                    afterColor.innerHTML = `Color: ${color}`;
+                }
+            }
+
+            inputCheck(colorInput);
+
+        }());
+    </script>
+</body>
+</html>
