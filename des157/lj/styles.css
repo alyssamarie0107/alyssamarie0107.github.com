@@ -2,6 +2,16 @@ h1 {margin: 0;}
 
 a {text-decoration: none;}
 
+time,
+span {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+span {
+    font-family: 'Montserrat', sans-serif;
+}
+
 p {
     width: 7in;
     font-size: 14px;
@@ -34,10 +44,11 @@ main {
     flex-direction: column;
 }
 
-article>section {
+article{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 30px;
+    flex-direction: column;
 }
 
 footer {
@@ -114,14 +125,4 @@ footer>nav>a {
 .title {
     font-size: 28px;
     font-family: 'Playfair Display', serif;
-}
-
-.title>span {
-    font-family: 'Montserrat', sans-serif;
-}
-
-.title>span,
-.date {
-    font-size: 14px;
-    text-transform: uppercase;
 }
