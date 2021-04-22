@@ -1,0 +1,91 @@
+body {
+    background-color: #E5E5E5;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+header {
+    width: 50%;
+    display: flex;
+    color: #B07453;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: 'Oranienbaum', serif;
+    /* background-color: chocolate; */
+}
+
+h1 {text-align: center;}
+
+main {
+    width: 50%;
+    height: 717px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: cadetblue; */
+}
+
+form {
+    color: #B07453;
+    padding: 25px;
+    font-size: 16px;
+    border-radius: 15px;
+    border: 1px solid #B07453;
+    background-color: #e7c1ab;
+}
+
+label,input{display: block;}
+
+label {margin-bottom: 5px;}
+
+input[type=text],
+input[type=checkbox] {
+    color: #E5E5E5;
+    border-style: none;
+    background-color: #B7B7A4;
+}
+
+input[type=text] {
+    width: 360px;
+    padding: 9px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+input[type=checkbox] {
+    margin-bottom: 15px;
+}
+
+input[type=submit] {
+    width: 120px;
+    height: 45px;
+    color: #E5E5E5;
+    cursor: pointer;
+    border-style: none;
+    border-radius: 5px;
+    background-color: #B07453;
+}
+
+input:focus {
+    outline: none;
+    background-color: #636348;
+}
+
+fieldset {
+    border-style: none;
+}
+
+fieldset input, fieldset label {display: inline;}
+
+#container {
+    display: flex;
+    max-width: 1366px;
+    margin: 1em auto;
+    justify-content: center;
+    /* background-color: cornflowerblue; */
+}
+
+/* centers submit button in form */
+#submit-btn-container {
+    display: flex;
+    justify-content: center;
+}
