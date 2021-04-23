@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,16 +15,17 @@
     <link href="styles.css" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
+
 <body>
     <div id="container">
         <header>
-            <h1>Welcome to Mood Affirmation MadLibs</h1>
+            <div id="circular-welcome">Welcome&middot;to&middot;Mood&middot;Affirmation&middot;MadLibs&middot;</div>
         </header>
         <main>
             <form>
                 <!-- first name -->
                 <label for="fname">First Name</label>
-                <input type="text" name="fname" id="fname" required>
+                <input type="text" name="fname" id="fname" >
 
                 <!-- feeling -->
                 <fieldset>
@@ -53,23 +55,37 @@
 
                 <!-- fav. hobby -->
                 <label for="hobby">Favorite Hobby</label>
-                <input type="text" name="hobby" id="hobby" required>
+                <input type="text" name="hobby" id="hobby" >
 
                 <!-- fav. food -->
                 <label for="food">Favorite Food</label>
-                <input type="text" name="food" id="food" required>
+                <input type="text" name="food" id="food" >
 
                 <!-- who makes you happy-->
-                <label for="person">Who makes you the happiest?</label>
-                <input type="text" name="person" id="person" required>
-                
-                <div id="submit-btn-container">
+                <label for="person">Person who makes you happiest</label>
+                <input type="text" name="person" id="person" >
+
+                <div class="btn-container">
                     <input type="submit" name="submit" value="submit">
                 </div>
             </form>
+            <section id="output">
+                <p id="output-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <div class="btn-container">
+                    <button id="reset-btn">Reset</button>
+                </div>
+            </section>
         </main>
-        <footer>
-        </footer>
     </div>
+    <footer>
+        <nav>
+            <a href="https://validator.w3.org/check?uri=https://alyssamarie0107.github.io/des157/studio1">Valid HTML</a>
+            <span>|</span>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
+        </nav>
+    </footer>
 </body>
+
 </html>

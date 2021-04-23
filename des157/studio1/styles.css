@@ -6,10 +6,8 @@ body {
 header {
     width: 50%;
     display: flex;
-    color: #B07453;
     align-items: center;
-    text-transform: uppercase;
-    font-family: 'Oranienbaum', serif;
+    justify-content: center;
     /* background-color: chocolate; */
 }
 
@@ -31,6 +29,7 @@ form {
     border-radius: 15px;
     border: 1px solid #B07453;
     background-color: #e7c1ab;
+    transition: display 2s ease 1s;
 }
 
 label,input{display: block;}
@@ -55,15 +54,17 @@ input[type=checkbox] {
     margin-bottom: 15px;
 }
 
-input[type=submit] {
+input[type=submit],
+#reset-btn {
     width: 120px;
     height: 45px;
     color: #E5E5E5;
     cursor: pointer;
     border-style: none;
     border-radius: 5px;
-    background-color: #B07453;
 }
+
+input[type=submit] {background-color: #B07453;}
 
 input:focus {
     outline: none;
@@ -76,6 +77,19 @@ fieldset {
 
 fieldset input, fieldset label {display: inline;}
 
+footer {
+    padding: 20px;
+    text-align: center;
+}
+
+footer>nav>a {
+    color: #B07453;
+    margin: 10px;
+    text-decoration: none;
+}
+
+span {color: #B07453;}
+
 #container {
     display: flex;
     max-width: 1366px;
@@ -84,8 +98,45 @@ fieldset input, fieldset label {display: inline;}
     /* background-color: cornflowerblue; */
 }
 
-/* centers submit button in form */
-#submit-btn-container {
+#circular-welcome {
+    color: #B07453;
+    font-size: 35px;
+    border-radius: 50%;
+    position: relative;
+    padding: 5px;
+    text-transform: uppercase;
+    font-family: 'Oranienbaum', serif;
+    animation: rotateWelcome 100s linear infinite;
+}
+
+#circular-welcome span {
+    position: absolute;
+    transform-origin: top left;
+}
+
+/* centers submit btn in form and reset btn in output section */
+.btn-container {
     display: flex;
     justify-content: center;
+}
+
+#output {
+    display: none;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid #636348;
+    background-color: #B7B7A4;
+}
+
+#output-text {
+    color: #636348;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+}
+
+#reset-btn {background-color: #636348;}
+
+@keyframes rotateWelcome {
+    from {transform:rotate(-360deg);}
+    to {transform: rotate(360deg);}
 }
