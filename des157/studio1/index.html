@@ -25,31 +25,31 @@
             <form>
                 <!-- first name -->
                 <label for="fname">First Name</label>
-                <input type="text" name="fname" id="fname" >
+                <input type="text" name="fname" id="fname" required>
 
                 <!-- feeling -->
                 <fieldset>
                     <legend>Feeling</legend>
-                    <input type="checkbox" name="feeling[]" id="happy" value="happy">
+                    <input type="checkbox" name="feeling" id="happy" value="happy">
                     <label for="happy">Happy</label>
 
                     <br>
-                    <input type="checkbox" name="feeling[]" id="sad" value="sad">
+                    <input type="checkbox" name="feeling" id="sad" value="sad">
                     <label for="sad">Sad</label>
 
                     <br>
 
-                    <input type="checkbox" name="feeling[]" id="anxious" value="anxious">
+                    <input type="checkbox" name="feeling" id="anxious" value="anxious">
                     <label for="anxious">Anxious</label>
 
                     <br>
 
-                    <input type="checkbox" name="feeling[]" id="angry" value="angry">
+                    <input type="checkbox" name="feeling" id="angry" value="angry">
                     <label for="angry">Angry</label>
 
                     <br>
 
-                    <input type="checkbox" name="feeling[]" id="overwhelmed" value="overwhelmed">
+                    <input type="checkbox" name="feeling" id="overwhelmed" value="overwhelmed">
                     <label for="overwhelmed">Overwhelmed</label>
                 </fieldset>
 
@@ -70,9 +70,7 @@
                 </div>
             </form>
             <section id="output">
-                <p id="output-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
+                <p id="output-text"></p>
                 <div class="btn-container">
                     <button id="reset-btn">Reset</button>
                 </div>
