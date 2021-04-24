@@ -7,7 +7,9 @@ header {
     width: 50%;
     display: flex;
     align-items: center;
+    position: relative;
     justify-content: center;
+    overflow: hidden;
     /* background-color: chocolate; */
 }
 
@@ -98,20 +100,104 @@ span {color: #B07453;}
     /* background-color: cornflowerblue; */
 }
 
+.mood-face {
+    border-radius: 50%;
+    position: absolute;
+    background-color: #B7B7A4;
+    border: 1px solid #636348;
+}
+
+#mood-face1,
+#mood-face2,
+#mood-face3 {
+    animation: animation1 15s linear infinite forwards;
+}
+
+#mood-face1 {
+    top: 0;
+    right: 5%;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: #B7B7A4;
+    border: 1px solid #636348;
+}
+
+#happy-face {
+    width: 200px;
+    height: 200px;
+}
+
+#mood-face2 {
+    top: 5%;
+    left: 10%;
+    width: 100px;
+    height: 100px;
+}
+
+#sad-face {
+    width: 100px;
+    height: 100px;
+}
+
+#mood-face3 {
+    top: 5%;
+    left: 40%;
+    width: 50px;
+    height: 50px;
+}
+
+#happy-face2 {
+    width: 60px;
+    height: 60px;
+}
+
+#mood-face4, 
+#mood-face5 {
+    animation: animation2 15s linear infinite forwards;
+}
+
+#mood-face4 {
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    height: 300px;
+}
+
+#straight-face {
+    width: 300px;
+    height: 300px;
+}
+
+#mood-face5 {
+    bottom: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+}
+
+#happy-face3 {
+    width: 150px;
+    height: 150px;
+}
+
 #circular-welcome {
-    color: #B07453;
-    font-size: 35px;
+    /* color: #B07453; */
     border-radius: 50%;
     position: relative;
-    padding: 5px;
-    text-transform: uppercase;
-    font-family: 'Oranienbaum', serif;
     animation: rotateWelcome 100s linear infinite;
 }
 
 #circular-welcome span {
+    color: #B07453;
+    font-size: 35px;
     position: absolute;
+    text-transform: uppercase;
     transform-origin: top left;
+    font-family: 'Oranienbaum', serif;
 }
 
 /* centers submit btn in form and reset btn in output section */
@@ -139,4 +225,34 @@ span {color: #B07453;}
 @keyframes rotateWelcome {
     from {transform:rotate(-360deg);}
     to {transform: rotate(360deg);}
+}
+
+@keyframes animation1 {
+    0% {
+        transform: translate(0,0);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-100px,200px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-200px,500px);
+        opacity: 0;
+    }
+}
+
+@keyframes animation2 {
+    0% {
+        transform: translate(0,0);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(100px,-200px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(200px,-500px);
+        opacity: 0;
+    }
 }
