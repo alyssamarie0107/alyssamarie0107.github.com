@@ -45,40 +45,40 @@
                 <!-- feeling -->
                 <fieldset>
                     <legend>Feeling</legend>
-                    <input type="checkbox" name="feeling" id="happy" value="happy">
+                    <input type="radio" name="feeling" id="happy" value="happy" required>
                     <label for="happy">Happy</label>
 
                     <br>
-                    <input type="checkbox" name="feeling" id="sad" value="sad">
+                    <input type="radio" name="feeling" id="sad" value="sad">
                     <label for="sad">Sad</label>
 
                     <br>
 
-                    <input type="checkbox" name="feeling" id="anxious" value="anxious">
+                    <input type="radio" name="feeling" id="anxious" value="anxious">
                     <label for="anxious">Anxious</label>
 
                     <br>
 
-                    <input type="checkbox" name="feeling" id="angry" value="angry">
+                    <input type="radio" name="feeling" id="angry" value="angry">
                     <label for="angry">Angry</label>
 
                     <br>
 
-                    <input type="checkbox" name="feeling" id="overwhelmed" value="overwhelmed">
+                    <input type="radio" name="feeling" id="overwhelmed" value="overwhelmed">
                     <label for="overwhelmed">Overwhelmed</label>
                 </fieldset>
 
                 <!-- fav. hobby -->
                 <label for="hobby">Favorite Hobby</label>
-                <input type="text" name="hobby" id="hobby" >
+                <input type="text" name="hobby" id="hobby" required>
 
                 <!-- fav. food -->
                 <label for="food">Favorite Food</label>
-                <input type="text" name="food" id="food" >
+                <input type="text" name="food" id="food" required>
 
                 <!-- who makes you happy-->
                 <label for="person">Person who makes you happiest</label>
-                <input type="text" name="person" id="person" >
+                <input type="text" name="person" id="person" required>
 
                 <div class="btn-container">
                     <input type="submit" name="submit" value="submit">
@@ -86,6 +86,7 @@
             </form>
             <section id="output">
                 <p id="output-text"></p>
+                <p id="affirmation"></p>
                 <div class="btn-container">
                     <button id="reset-btn">Reset</button>
                 </div>

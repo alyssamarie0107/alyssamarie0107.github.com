@@ -13,11 +13,13 @@ header {
     /* background-color: chocolate; */
 }
 
-h1 {text-align: center;}
+h1 {
+    text-align: center;
+}
 
 main {
     width: 50%;
-    height: 717px;
+    height: 710px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,12 +36,17 @@ form {
     transition: display 2s ease 1s;
 }
 
-label,input{display: block;}
+label,
+input {
+    display: block;
+}
 
-label {margin-bottom: 5px;}
+label {
+    margin-bottom: 5px;
+}
 
 input[type=text],
-input[type=checkbox] {
+input[type=radio] {
     color: #E5E5E5;
     border-style: none;
     background-color: #B7B7A4;
@@ -52,7 +59,7 @@ input[type=text] {
     margin-bottom: 20px;
 }
 
-input[type=checkbox] {
+input[type=radio] {
     margin-bottom: 15px;
 }
 
@@ -66,7 +73,9 @@ input[type=submit],
     border-radius: 5px;
 }
 
-input[type=submit] {background-color: #B07453;}
+input[type=submit] {
+    background-color: #B07453;
+}
 
 input:focus {
     outline: none;
@@ -77,10 +86,12 @@ fieldset {
     border-style: none;
 }
 
-fieldset input, fieldset label {display: inline;}
+fieldset input,
+fieldset label {
+    display: inline;
+}
 
 footer {
-    padding: 20px;
     text-align: center;
 }
 
@@ -90,7 +101,9 @@ footer>nav>a {
     text-decoration: none;
 }
 
-span {color: #B07453;}
+span {
+    color: #B07453;
+}
 
 #container {
     display: flex;
@@ -155,7 +168,7 @@ span {color: #B07453;}
     height: 60px;
 }
 
-#mood-face4, 
+#mood-face4,
 #mood-face5 {
     animation: animation2 15s linear infinite forwards;
 }
@@ -208,51 +221,68 @@ span {color: #B07453;}
 
 #output {
     display: none;
-    padding: 10px;
+    padding: 15px;
     border-radius: 15px;
     border: 1px solid #636348;
     background-color: #B7B7A4;
 }
 
-#output-text {
+#output-text,
+#affirmation {
+    width: 500px;
     color: #636348;
-    line-height: 1.5;
+    line-height: 2;
     letter-spacing: 0.5px;
 }
 
-#reset-btn {background-color: #636348;}
+#affirmation {
+    font-weight: bold;
+}
+
+#reset-btn {
+    background-color: #636348;
+}
 
 @keyframes rotateWelcome {
-    from {transform:rotate(-360deg);}
-    to {transform: rotate(360deg);}
+    from {
+        transform: rotate(-360deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes animation1 {
     0% {
-        transform: translate(0,0);
+        transform: translate(0, 0);
         opacity: 0;
     }
+
     50% {
-        transform: translate(-100px,200px);
+        transform: translate(-100px, 200px);
         opacity: 1;
     }
+
     100% {
-        transform: translate(-200px,500px);
+        transform: translate(-200px, 500px);
         opacity: 0;
     }
 }
 
 @keyframes animation2 {
     0% {
-        transform: translate(0,0);
+        transform: translate(0, 0);
         opacity: 0;
     }
+
     50% {
-        transform: translate(100px,-200px);
+        transform: translate(100px, -200px);
         opacity: 1;
     }
+
     100% {
-        transform: translate(200px,-500px);
+        transform: translate(200px, -500px);
         opacity: 0;
     }
 }
