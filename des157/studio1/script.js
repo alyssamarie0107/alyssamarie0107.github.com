@@ -147,7 +147,7 @@
             Then come back and check in with yourself to see if it is worth staying angry.
             `;
 
-            affirmation.innerHTML = 'Affirmation: Let things flow and be positive. - I am';
+            affirmation.innerHTML = 'Affirmation: "Let things flow and be positive." - I am';
 
         } else {
             // overwhelmed script
