@@ -23,8 +23,12 @@ p {
 p>a {
     color: #333;
     font-weight: bold;
-    text-decoration: underline;
+    text-decoration: none;
 }
+
+p>a:hover,
+footer>nav>a:hover,
+.author-article-container>nav>a:hover {text-decoration: underline;}
 
 body {
     background-color: #D9D9D9;
@@ -55,7 +59,8 @@ footer {
     margin: 40px 0 20px 0;
 }
 
-footer>nav>a {
+footer>nav>a,
+.author-article-container>nav>a {
     color: #333;
     font-size: 14px;
     text-transform: uppercase;
@@ -123,6 +128,13 @@ footer>nav>a {
 }
 
 .title {
+    width: 600px;
     font-size: 28px;
     font-family: 'Playfair Display', serif;
+}
+
+.author-article-container {
+    width: 7in;
+    display: flex;
+    justify-content: space-between;
 }
