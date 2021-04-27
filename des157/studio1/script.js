@@ -156,9 +156,9 @@
             Hello ${fname.bold()}! Welcome to Mood Affirmation MadLibs, where you are given positive reminders or statements
             based on your mood. It is great that you are taking the time to hone into how you are feeling today. 
             Thank you for setting some time out of your busy day and for sharing a little about yourself. You mentioned that you are 
-            feeling ${feeling.bold()} today. That is okay! Life can be very hectic and it is only normal to feel like this when it is.
+            feeling ${feeling.bold()} today. That is okay! Life can be very hectic and it is only normal to feel like this.
             I am sure you have a lot going on right now and you may not be entirely sure how you are going to get everything sorted out. 
-            But take a breath and trust in yourself. You don't have to tackle everything all at once. Do one things at a time and trust
+            But take a breath and trust in yourself. You don't have to tackle everything all at once. Do one thing at a time and trust
             that you will figure out the rest along the way. It is important though, that you take a break from whatever it is that is 
             overwhelming you. Take some time and do some of your favorite things, such as ${hobby.bold()}, indulging in ${food.bold()}, or 
             hanging out with the person who makes you the happiest, ${person.bold()}. Everything will be okay and will work out. 
