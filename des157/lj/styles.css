@@ -55,6 +55,12 @@ article{
     flex-direction: column;
 }
 
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 footer {
     margin: 40px 0 20px 0;
 }
