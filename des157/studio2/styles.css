@@ -98,6 +98,7 @@ figcaption {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     padding: 20px;
     position: absolute;
     box-sizing: border-box;
@@ -123,9 +124,14 @@ figcaption {
     background-color: transparent;
 }
 
-.fadeinimg {animation: fadein 2s}
+.btn-container > button {
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    background-color: black;
+}
 
-@keyframes facein {
-    from {opacity: 0;}
-    to {opacity: 1;}	
+.btn-container > button:focus {
+    outline: none;
 }
