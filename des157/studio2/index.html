@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Every Picture</title>
+
+    <!-- normalize script first -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Girassol&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <!-- custom -->
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1>Take more pictures</h1>
+        </header>
+        <main>
+            <!-- canon -->
+            <div class="camera-container">
+                <img src="images/canon-ae.png" alt="canon-ae">
+                <a href="#" class="open" id="one">Canon AE-1 Program</a>
+            </div>
+            <!-- polaroid -->
+            <div class="camera-container">
+                <img src="images/polaroid.png" alt="polaroid">
+                <a href="#" class="open" id="two">Polaroid Land Camera</a>
+            </div>
+            <!-- kodak -->
+            <div class="camera-container">
+                <img src="images/kodak.png" alt="kodak">
+                <a href="#" class="open" id="three">Kodak Retina IIIc</a>
+            </div>
+            <!-- bell & howell -->
+            <div class="camera-container">
+                <img src="images/bell-howell.png" alt="bell-howel">
+                <a href="#" class="open" id="four">Bell & Howell Zoomatic Movie Camera</a>
+            </div>
+        </main>
+        <section id="ol-one" class="overlay hidden">
+            <div class="content">
+                <figure>
+                    <img src="images/keana.png" alt="slideshow image" id="myimage">
+                    <figcaption>Keana Delos Santos - 2021</figcaption>
+                </figure>
+                <button class="corner close">&otimes;</button>
+            </div>
+        </section>
+        <section id="ol-two" class="overlay hidden">
+            <div class="content">
+                <figure>
+                    <img src="images/yosemite.png" alt="slideshow image" id="myimage">
+                    <figcaption>Yosemite - 2020</figcaption>
+                </figure>
+                <button class="corner close">&otimes;</button>
+            </div>
+        </section>
+        <section id="ol-three" class="overlay hidden">
+            <div class="content">
+                <figure>
+                    <img src="images/parents.png" alt="slideshow image" id="myimage">
+                    <figcaption>My parents - 1997</figcaption>
+                </figure>
+                <button class="corner close">&otimes;</button>
+            </div>
+        </section>
+        <section id="ol-four" class="overlay hidden">
+            <div class="content">
+                <figure>
+                    <video width="320" autoplay muted loop>
+                        <source src="videos/sf-video.mp4" type="video/mp4">
+                    </video>
+                    <figcaption>San Francisco - 2021</figcaption>
+                </figure>
+                <button class="corner close">&otimes;</button>
+            </div>
+        </section>
+        <footer>
+            <nav>
+                <a href="mailto:amrrodriguez@ucdavis.edu">Email</a>
+                <a href="https://validator.w3.org/check?uri=https://alyssamarie0107.github.io/des157/studio2">Valid HTML5</a>
+                <a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
+            </nav>
+        </footer>
+    </div>
+</body>
+
+</html>
