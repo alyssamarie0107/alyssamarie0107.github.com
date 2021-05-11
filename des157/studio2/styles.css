@@ -35,7 +35,10 @@ a:hover {
     -webkit-text-fill-color: white;
 }
 
-footer > nav > a {font-size: 25px;}
+footer > nav > a {
+    font-size: 25px;
+    margin: 8px;
+}
 
 img {
     display: block;
