@@ -1,0 +1,125 @@
+body {
+    font-family: 'Reenie Beanie', cursive;
+    background-color: #AEE4F5;
+}
+
+h1, h2 {
+    color: black;
+    text-transform: uppercase;
+}
+
+h1 {font-size: 65px;}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: brown;
+}
+
+main {
+    width: 100%;
+    height: 440px;
+    display: flex;
+    justify-content: space-between;
+    background-color: burlywood;
+}
+
+footer {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: #1A8400;
+}
+
+footer > nav {
+    height: 60px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: #442F10;
+}
+
+footer > nav > a {
+    color: white;
+    font-size: 20px;
+    margin: 10px;
+    text-decoration: none;
+}
+
+footer > nav > a:hover { text-decoration: underline;}
+
+button {
+    width: 115px;
+    height: 55px;
+    margin: 10px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: 1.5px solid #C69A00;
+    color: #C69A00;
+    background-color: #FDEA41;
+    cursor:pointer;
+}
+
+#container {
+    display: flex;
+    margin: 1em auto;
+    max-width: 1366px;
+    align-items: center;
+    flex-direction: column;
+    background-color: cadetblue;
+}
+
+.cloud {
+    display: flex;
+    position: relative;
+    background-color: thistle;
+}
+
+.cloud > div {
+    width: 90px;
+    height: 63px;
+    border-radius: 60%;
+    background-color: white;
+}
+
+#mud-pile {
+    width: 300px;
+    height: 200px;
+    border-radius: 60%;
+    background-color: #442F10;
+}
+
+#pig1-container,
+#pig2-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#pig1-container {
+    margin-left: 150px;
+    background-color: chocolate;
+}
+
+#pig2-container {
+    margin-right: 150px;
+    background-color: darkkhaki;
+}
+
+#btns-container {
+    display: flex;
+    align-items: center;
+    background-color: darkblue;
+}
+
+.pig-head {
+    width: 210px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #F6C3C3;
+}
