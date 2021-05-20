@@ -56,21 +56,6 @@ p {
     /* background-color: cornflowerblue; */
 }
 
-footer {
-    display: flex;
-    justify-content: center;
-    color: black;
-    padding: 20px;
-}
-
-footer > nav > a {
-    color: black;
-    font-size: 18px;
-    letter-spacing: 0.5px;
-    text-decoration: none;
-    text-transform: lowercase;
-}
-
 #summary {
     width: 800px;
 }
