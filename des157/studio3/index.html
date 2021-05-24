@@ -120,7 +120,7 @@
 
         <section id="game-control2">
             <button id="quit"><a href="#" class="open" id="two">Quit</a></button>
-            <button><a href="#" class="open" id="one">Rules</a></button>
+            <button><a href="#" class="open" id="three">Rules</a></button>
         </section>
 
         <!-- overlay for quit -->
@@ -131,6 +131,31 @@
                     <button id="quit-yes">Yes</button>
                     <button class="close">No</button>
                 </div>
+            </article>
+        </section>
+
+        <!-- overlay for rules again -->
+        <section id="ol-three" class="overlay hidden">
+            <article>
+                <h2>Game Rules:</h2>
+                <ul>
+                    <li>There are two players.</li>
+                    <li>The player whose turn it is rolls the dice.</li>
+                    <li>
+                        The total of the roll is added to the current player's score, unless either die comes up as
+                        a "pig". If this happens, this player's turn is over, and it is the other player’s turn.
+                    </li>
+                    <li>
+                        If a player rolls two "pigs", that player's current score gets zeroed out, and
+                        they have to start over, accumulating points from zero.
+                    </li>
+                    <li>
+                        After each roll, the current player can either roll again, (assuming a "pig" was not rolled)
+                        or if the current player feels that luck is running thin, they can pass to the other player.
+                    </li>
+                    <li>The first player to get 30 points or higher wins.</li>
+                </ul>
+                <button class="close">Close</button>
             </article>
         </section>
     </div>
