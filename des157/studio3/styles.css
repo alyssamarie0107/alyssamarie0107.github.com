@@ -73,9 +73,14 @@ footer>nav>a:hover {
     text-decoration: underline;
 }
 
-button {
+button,
+#game-control1 > a,
+#game-control2 > a {
     width: 115px;
     height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 10px;
     font-size: 20px;
     cursor: pointer;
