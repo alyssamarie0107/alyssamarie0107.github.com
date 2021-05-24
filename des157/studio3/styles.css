@@ -198,13 +198,15 @@ button>a {
     border-bottom: 26px solid #F6C3C3;
 }
 
-#left-ear {
+#pig-1-left-ear,
+#pig-2-left-ear {
     top: 52px;
     left: 20px;
     transform: rotate(-32deg);
 }
 
-#right-ear {
+#pig-1-right-ear,
+#pig-2-right-ear {
     top: 24px;
     left: 155px;
     transform: rotate(33deg);
