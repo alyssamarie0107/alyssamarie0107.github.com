@@ -1,21 +1,62 @@
 (function(){
-    let startGame = document.getElementById('startgame');
-    let gameControl = document.getElementById('gamecontrol');
-    let game = document.getElementById('game');
-    let score = document.getElementById('score');
-    let actionArea = document.getElementById('actions');
+    'use strict';
+
+    // JS overlay
+    const openBtns = document.querySelectorAll('.open');
+    const closeBtns = document.querySelectorAll('.close');
+
+    for(const eachOpenBtn of openBtns) {
+        eachOpenBtn.addEventListener('click', function(event){
+            event.preventDefault();
+
+            console.log(event.target.id);
+            
+            const thisBtn = event.target.id;
+        
+            document.querySelector(`#ol-${thisBtn}`).className = 'overlay showing';
+
+            // play notification mp3 for when user clicks on button with overlay (rules and quit)
+            const overlaySound = new Audio('media/notification.mp3');
+            overlaySound.play();
+            overlaySound.volume = 0.2;
+        });
+    }
+
+    for(const eachCloseBtn of closeBtns) {
+        eachCloseBtn.addEventListener('click', function(event){
+            event.preventDefault();
+
+            // only one overlay showing at a time
+            document.querySelector('.showing').className = 'overlay hidden';
+        });
+    }
+
+    document.addEventListener('keydown', function(event){
+        if(event.key == "Escape"){
+            document.querySelector('.showing').className = 'overlay hidden';
+        }
+    });
+    // end of JS overlay 
+
+    // JS for game
+    let gameControl = document.querySelector('#game-control1');
+    let startGame = document.querySelector('#start-game');
+    let game = document.querySelector('#game');
+    let pig1Score = document.querySelector('#pig1-score');
+    let pig2Score = document.querySelector('#pig2-score');
+    let actionArea = document.querySelector('#actions');
 
     // keeping track of game data
     let gameData = {
         dice: [
-            '1die.jpg', 
-            '2die.jpg', 
-            '3die.jpg', 
-            '4die.jpg', 
-            '5die.jpg', 
-            '6die.jpg'
+            '1die.png', 
+            '2die.png', 
+            '3die.png', 
+            '4die.png', 
+            '5die.png', 
+            '6die.png'
         ],
-        players: ['player 1', 'player 2'],
+        players: ['pig 1', 'pig 2'],
         score: [0,0],
         roll1: 0,
         roll2: 0,
@@ -25,28 +66,36 @@
     };
 
     startGame.addEventListener('click', function(){
+        // display game control 2
+        document.querySelector('#game-control2').style.display = "flex";
+
+        document.querySelector('#quit-yes').addEventListener('click', function(){
+            // refreshes the page
+            location.reload();
+        });
+
         // randomly set game index here
         // index will be either 0 or 1
         gameData.index = Math.round(Math.random());
         console.log(gameData.index)
 
-        gameControl.innerHTML = '<h2>The Game Has Started</h2>';
-        gameControl.innerHTML += '<button id="quit">Wanna Quit?</button>'
-
-        document.getElementById('quit').addEventListener('click', function(){
-            // refreshes the page
-            location.reload();
-        });
+        document.querySelector('#game-play').style.display = "flex";
+        gameControl.style.display = "none";
 
         setUpTurn();
     });
 
     function setUpTurn() {
-        game.innerHTML = `<p>Roll the dice for ${gameData.players[gameData.index]}</p>`;
+        game.innerHTML = `<h2>Roll the dice for ${gameData.players[gameData.index]}</h2>`;
         actionArea.innerHTML = '<button id="roll">Roll the Dice</button>';
 
         document.getElementById('roll').addEventListener('click', function(){
             throwDice();
+
+            // play roll dice mp3
+            const rollSound = new Audio('media/roll.mp3');
+            rollSound.play();
+            rollSound.volume = 0.5;
         });
     }
 
@@ -60,15 +109,20 @@
         gameData.roll2 = Math.floor(Math.random() * 6) + 1;
         gameData.rollSum = gameData.roll1 + gameData.roll2;
 
-        game.innerHTML = `<p>Roll the dice for ${gameData.players[gameData.index]}</p>`;
-        game.innerHTML += `<img src=${gameData.dice[gameData.roll1-1]}>
-                            <img src=${gameData.dice[gameData.roll2-1]}>`;
+        game.innerHTML = `<h2>Roll the dice for ${gameData.players[gameData.index]}</h2>`;
+        game.innerHTML += `<img src=images/${gameData.dice[gameData.roll1-1]}>
+                            <img src=images/${gameData.dice[gameData.roll2-1]}>`;
 
         console.log(gameData);
 
         if(gameData.rollSum === 2) {
             // switch player
-            game.innerHTML += '<p>Oh snap! Snake eyes!</p>';
+            game.innerHTML += '<h3>Uh oh! Two pigs!</h3';
+
+            // audio sound for when pig appears
+            const pigSound = new Audio('media/ofarm.mp3');
+            pigSound.play();
+            pigSound.volume = 0.2;
 
             // zero out the score
             gameData.score[gameData.index] = 0;
@@ -82,23 +136,32 @@
 
             // show the current score...
             showCurrentScore();
-            setTimeout(setUpTurn, 2000);
+            setTimeout(setUpTurn, 3000);
         }
         else if(gameData.roll1 === 1 || gameData.roll2 === 1) {
             // switch player
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
-            game.innerHTML += `<p>Sorry one of your rolls was a one. Switching to ${gameData.players[gameData.index]}</p>`;
+            game.innerHTML += `<h3>Sorry one of your rolls was a pig! Switching to ${gameData.players[gameData.index]}</h3>`;
+
+            // audio sound for when pig appears
+            const pigSound = new Audio('media/ofarm.mp3');
+            pigSound.play();
+            pigSound.volume = 0.2;
 
             // set up turn
-            setTimeout(setUpTurn, 2000);
+            setTimeout(setUpTurn, 3000);
         }
         else {
             gameData.score[gameData.index] = gameData.score[gameData.index] + gameData.rollSum;
-            actionArea.innerHTML = '<button id="rollagain">Roll again</button> or <button id="pass">Pass</button>';
+            actionArea.innerHTML = '<button id="rollagain">Roll again</button> <button id="pass">Pass</button>';
 
             document.getElementById('rollagain').addEventListener('click', function() {
-                //setUpTurn();
                 throwDice();
+
+                // play roll dice mp3
+                const rollSound = new Audio('media/roll.mp3');
+                rollSound.play();
+                rollSound.volume = 0.5;
             });
 
             document.getElementById('pass').addEventListener('click', function() {
@@ -114,10 +177,27 @@
 
     function checkWinningCondition() {
         if(gameData.score[gameData.index] > gameData.gameEnd) {
-            score.innerHTML = `<h2>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points!</h2>`;
+            showCurrentScore();
+
+            // play winning sound
+            const winSound = new Audio('media/win.mp3');
+            setTimeout(winSound.play(),2000);
+            winSound.volume = 0.2;
+
+            game.innerHTML = `<h2>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points!</h2>`;
 
             actionArea.innerHTML = '';
-            document.getElementById('quit').innerHTML = "Start a New Game";
+            
+            let quitBtn = document.querySelector('#quit');
+
+            quitBtn.innerHTML = "Start a New Game";
+            quitBtn.style.animation = "blinker 1s linear infinite";
+
+            quitBtn.addEventListener('click', function(){
+                // refreshes the page
+                location.reload();
+            });
+
         }
         else {
             // update the score
@@ -126,8 +206,7 @@
     }
 
     function showCurrentScore() {
-        score.innerHTML = `<p>The score is currently <strong>${gameData.players[0]}
-        ${gameData.score[0]}</strong> and <strong>${gameData.players[1]} 
-        ${gameData.score[1]}</strong></p>`;
+        pig1Score.innerHTML = `Score: ${gameData.score[0]}`;
+        pig2Score.innerHTML = `Score: ${gameData.score[1]}`;
     }
 })();

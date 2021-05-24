@@ -3,19 +3,33 @@ body {
     background-color: #AEE4F5;
 }
 
-h1, h2 {
+h1, h2, h3 {
     color: black;
     text-transform: uppercase;
 }
 
 h1 {font-size: 65px;}
 
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+li {
+    color: white;
+    font-size: 19px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+}
+
+img {width: 150px}
+
 header {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    background-color: brown;
+    /* background-color: brown; */
 }
 
 main {
@@ -23,12 +37,12 @@ main {
     height: 440px;
     display: flex;
     justify-content: space-between;
-    background-color: burlywood;
+    /* background-color: burlywood; */
 }
 
 footer {
     width: 100%;
-    height: 120px;
+    height: 160px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -36,10 +50,10 @@ footer {
 }
 
 footer > nav {
-    height: 60px;
+    height: 80px;
     display: flex;
-    align-items: flex-end;
     justify-content: center;
+    align-items: flex-end;
     background-color: #442F10;
 }
 
@@ -47,22 +61,24 @@ footer > nav > a {
     color: white;
     font-size: 20px;
     margin: 10px;
-    text-decoration: none;
 }
 
-footer > nav > a:hover { text-decoration: underline;}
+footer > nav > a:hover {text-decoration: underline;}
 
 button {
     width: 115px;
     height: 55px;
     margin: 10px;
     font-size: 20px;
-    border-radius: 20px;
-    border: 1.5px solid #C69A00;
+    cursor: pointer;
     color: #C69A00;
+    border-radius: 20px;
+    text-transform: uppercase;
+    border: 1.5px solid #C69A00;
     background-color: #FDEA41;
-    cursor:pointer;
 }
+
+button > a {color: #C69A00;}
 
 #container {
     display: flex;
@@ -70,28 +86,23 @@ button {
     max-width: 1366px;
     align-items: center;
     flex-direction: column;
-    background-color: cadetblue;
 }
 
 .cloud {
-    display: flex;
-    position: relative;
-    background-color: thistle;
-}
-
-.cloud > div {
     width: 90px;
     height: 63px;
     border-radius: 60%;
+    position: absolute;
     background-color: white;
 }
 
-#mud-pile {
-    width: 300px;
-    height: 200px;
-    border-radius: 60%;
-    background-color: #442F10;
-}
+#cloud-one {left: 50px;}
+
+#cloud-two {left: 100px;}
+
+#cloud-three {right: 50px;}
+
+#cloud-four {right: 100px;}
 
 #pig1-container,
 #pig2-container {
@@ -103,23 +114,189 @@ button {
 
 #pig1-container {
     margin-left: 150px;
-    background-color: chocolate;
+    /* background-color: chocolate; */
 }
 
 #pig2-container {
     margin-right: 150px;
-    background-color: darkkhaki;
+    /* background-color: darkkhaki; */
 }
 
-#btns-container {
+#game-control1 {
     display: flex;
     align-items: center;
-    background-color: darkblue;
+    /* background-color: darkblue; */
+}
+
+#game-play {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: cornflowerblue; */
+}
+
+#game,
+#actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    /* background-color: chocolate; */
+}
+
+#game {flex-direction: column;}
+
+#game-control2 {
+    width: 100%;
+    display: none;
+    justify-content: space-between;
+    /* background-color: chartreuse; */
+}
+
+#btn-container {
+    display: flex;
+}
+
+/* pig CSS */
+.pig-ear {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 30px solid black;
+}
+
+.pig-ear-inner {
+    position: relative;
+    top: 3px;
+    left: -18px;
+    width: 0;
+    height: 0;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-bottom: 26px solid #F6C3C3;
+}
+
+#left-ear {
+    top: 52px;
+    left: 20px;
+    transform: rotate(-32deg);
+}
+
+#right-ear {
+    top: 24px;
+    left: 155px;
+    transform: rotate(33deg);
+}
+
+.inner {
+    position: relative;
+    top: 4px;
+    left: -12px;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 22px solid #FB7D7D;
+}
+
+.pig-head,
+.pig-nose {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid black;
 }
 
 .pig-head {
     width: 210px;
     height: 200px;
-    border-radius: 50%;
+    flex-direction: column;
     background-color: #F6C3C3;
 }
+
+.eye-container {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.eye {
+    width: 5px;
+    height: 5px;
+    margin: 6px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.pig-nose {
+    width: 58px;
+    height: 40px;
+}
+
+.nostril {
+    width: 7px;
+    height: 13px;
+    margin: 2px;
+    border-radius: 50%;
+    background-color: #FB7D7D;
+    border: 1px solid black;
+}
+
+.pig-mouth {
+    width: 30px;
+    height: 20px;
+    border: solid 1.5px #000;
+    border-color: transparent transparent #000 transparent;
+    border-radius: 0 0 20px 50%/10px;
+}
+
+/* overlay CSS */
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showing {
+    visibility: visible;
+    opacity: 1;
+}
+
+.overlay {
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.overlay article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    box-sizing: border-box;
+    border: 2px solid #442F10;
+    background-color: rgb(80, 66, 57);
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.overlay > article > h2 {color: white;}
+
+/* animations */
+@keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
