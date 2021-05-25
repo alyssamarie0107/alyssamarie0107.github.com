@@ -56,6 +56,18 @@ p {
     /* background-color: cornflowerblue; */
 }
 
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+footer > nav > a,
+span {
+    color: black;
+    font-size: 17px;
+    margin: 5px;
+}
+
 #summary {
     width: 800px;
 }
