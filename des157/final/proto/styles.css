@@ -1,0 +1,138 @@
+body {
+    font-weight: lighter;
+    font-family: 'Girassol', cursive;
+    text-transform: uppercase;
+    background-color: white;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1,h2 {
+    font-weight: lighter;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: thin;
+    -webkit-text-stroke-color: black;
+}
+
+h1 {
+    font-size: 120px;
+    margin: 0 0 -40px 0;
+}
+
+h1:hover {
+    cursor: pointer;
+}
+
+h1:nth-child(1):hover {
+    -webkit-text-stroke-color: #E0D9D3;
+    -webkit-text-fill-color: #E0D9D3;
+}
+
+h1:nth-child(2):hover {
+    -webkit-text-stroke-color: #7787a3;
+    -webkit-text-fill-color: #7787a3;
+}
+
+h1:nth-child(3):hover {
+    -webkit-text-stroke-color: #c5c5c5;
+    -webkit-text-fill-color: #c5c5c5;
+}
+
+h1:nth-child(4) {
+    cursor: none;
+    -webkit-text-fill-color: black;
+}
+
+h1:nth-child(5):hover {
+    -webkit-text-stroke-color: #97a897;
+    -webkit-text-fill-color: #97a897;
+}
+
+h1:nth-child(6):hover {
+    -webkit-text-stroke-color: #c9c28a;
+    -webkit-text-fill-color: #c9c28a;
+}
+
+h1:nth-child(7) {
+    margin-bottom: 0;
+}
+
+h1:nth-child(7):hover {
+    -webkit-text-stroke-color: #978888;
+    -webkit-text-fill-color: #978888;
+}
+
+h2 {
+    margin: 0;
+    font-size: 100px;
+    text-align: center;
+}
+
+main {
+    width: 100%;
+    /* background-color: darkgreen; */
+}
+
+main > section {
+    display: flex;
+    margin: 20px;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: darkslategray; */
+}
+
+span {
+    -webkit-text-fill-color: black;
+}
+
+footer {
+    padding: 30px;
+    /* background-color: darkslategrey; */
+}
+
+footer > nav > a {
+    color: black;
+    font-size: 20px;
+    margin: 10px;
+    text-decoration: none;
+}
+
+#container {
+    display: flex;
+    margin: 1em auto;
+    max-width: 1366px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#intro {
+    margin-right: 100px;
+    /* background-color: cadetblue; */
+}
+
+#content {
+    width: 400px;
+    height: 500px;
+    border-radius: 20px;
+    background-color: black;
+}
+
+#cat-bri {
+    /* background-color: chocolate; */
+}
+
+.name-container {
+    display: flex;
+    flex-direction: column;
+    /* background-color: darkseagreen; */
+}
+
+.name-container > h2 {
+    width: 850px;
+}
