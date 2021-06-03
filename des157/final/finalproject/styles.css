@@ -3,6 +3,7 @@ body {
     font-family: 'Girassol', cursive;
     text-transform: uppercase;
     background-color: white;
+    overflow-x: hidden;
 }
 
 header {
@@ -26,9 +27,10 @@ button {
     width: 80px;
     height: 30px;
     border: none;
+    border-radius: 10px;
     cursor: pointer;
+    margin-top: 10px;
 }
-
 
 img {
     display: block;
@@ -61,7 +63,10 @@ h2, h3 {
 
 h2 {font-size: 100px;}
 
-h3 {font-size: 30px;}
+h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
 
 main>section {
     width: 100%;
@@ -149,7 +154,7 @@ footer>nav>a {
     flex-direction: column;
     align-items: center;
     padding: 0 15px 0 15px;
-    background-color: rgb(233, 233, 233);
+    background-color: rgb(219, 219, 219);
 }
 
 #polaroid-frame>a {
@@ -187,6 +192,13 @@ footer>nav>a {
 
 .name-container>h2 {
     margin-bottom: 60px;
+}
+
+.picture-container {
+    width: 50vw;
+    display: none;
+    align-items: center;
+    /* background-color: cadetblue; */
 }
 
 /************ overlay CSS ************/

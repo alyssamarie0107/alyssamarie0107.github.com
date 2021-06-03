@@ -87,6 +87,15 @@
             document.querySelector('.showing').className = 'overlay hidden';
         }
     });
+
+    // -----------------------
+    // JS for pictures
+    // -----------------------
+    document.querySelector('#zech-img').addEventListener('click', function(){
+        document.querySelector('.picture-container').style.display = "flex";
+        document.querySelector('#zechariah .name-container').style.display = "none";
+    });
+
  }());
 
 // ------------------------------------------
