@@ -1,0 +1,251 @@
+body {
+    font-weight: lighter;
+    font-family: 'Girassol', cursive;
+    text-transform: uppercase;
+    background-color: white;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: brown; */
+}
+
+header > nav > ul{
+    padding: 0;
+    list-style-type: none;
+    margin-right: 100px;
+    /* background-color: burlywood; */
+}
+
+a, button{text-decoration: none;}
+
+button {
+    width: 80px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+li {
+    list-style: none;
+    margin: 0 0 -40px 0;
+}
+
+li>a,
+h2 {
+    font-weight: lighter;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: thin;
+    -webkit-text-stroke-color: black;
+}
+
+li>a {font-size: 120px;}
+
+li>a:hover {
+    cursor: pointer;
+}
+
+h2, h3 {
+    text-align: center;
+    margin: 0;
+}
+
+h2 {font-size: 100px;}
+
+h3 {font-size: 30px;}
+
+main>section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+main>section>img {
+    transition: all 1s;
+}
+
+main>section>img:hover {
+    cursor: pointer;
+    transform: scale(0.9);
+    transition: all 1s;
+}
+
+span {
+    -webkit-text-fill-color: black;
+}
+
+footer {
+    padding: 30px;
+    /* background-color: darkslategrey; */
+}
+
+footer>nav>a {
+    color: black;
+    font-size: 20px;
+    margin: 10px;
+    text-decoration: none;
+}
+
+#container {
+    display: flex;
+    margin: 1em auto;
+    max-width: 1366px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#ty1:hover {
+    -webkit-text-stroke-color: #acb4c2;
+    -webkit-text-fill-color: #acb4c2;
+}
+
+#ty2:hover {
+    -webkit-text-stroke-color: #d3c0b1;
+    -webkit-text-fill-color: #d3c0b1;
+}
+
+#ty3:hover {
+    -webkit-text-stroke-color: #97a897;
+    -webkit-text-fill-color: #97a897;
+}
+
+#ty4 {
+    cursor: none;
+    -webkit-text-fill-color: black;
+}
+
+#ty5:hover {
+    -webkit-text-stroke-color: #978888;
+    -webkit-text-fill-color: #978888;
+}
+
+#ty6:hover {
+    -webkit-text-stroke-color: #c9c28a;
+    -webkit-text-fill-color: #c9c28a;
+}
+
+#ty7 {margin-bottom: 0;}
+
+#ty7:hover {
+    -webkit-text-stroke-color: #c5c5c5;
+    -webkit-text-fill-color: #c5c5c5;
+}
+
+#polaroid-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px 0 15px;
+    background-color: rgb(233, 233, 233);
+}
+
+#polaroid-frame>a {
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Shadows Into Light', cursive;
+    margin: 20px 0 20px 0;
+    background-color: black;
+}
+
+#content {
+    position: relative;
+    width: 380px;
+    height: 400px;
+    margin-top: 13px;
+}
+
+#content>img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 380px;
+    height: 400px;
+}
+
+#family {margin-top: 100px;}
+
+.name-container {
+    display: flex;
+    flex-direction: column;
+    /* background-color: darkseagreen; */
+}
+
+.name-container>h2 {
+    margin-bottom: 60px;
+}
+
+/************ overlay CSS ************/
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showing {
+    visibility: visible;
+    opacity: 1;
+}
+
+.overlay {
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.overlay article {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: #202020;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.overlay article>p {
+    width: 6in;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    font-family: sans-serif;
+}
+
+/************ animation styles ************/
+.fadeinimg {
+    animation: fadein 2s
+}
+
+@keyframes facein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
