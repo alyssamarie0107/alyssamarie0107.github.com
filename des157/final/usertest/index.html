@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Test</title>
+
+    <!-- normalize script first -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Girassol&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet">
+    <!-- custom -->
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <nav>
+                <ul>
+                    <li><a id="ty1" href="#family">Thank you</a></li>
+                    <li><a id="ty2" href="#cat">Thank you</a></li>
+                    <li><a id="ty3" href="#keana">Thank you</a></li>
+                    <li><a id="ty4" href="#">Thank you</a></li>
+                    <li><a id="ty5" href="#briley">Thank you</a></li>
+                    <li><a id="ty6" href="#tiana">Thank you</a></li>
+                    <li><a id="ty7" href="#zechariah">Thank you</a></li>
+                </ul>
+            </nav>
+            <div id="polaroid-frame">
+                <div id="content">
+                    <img src="images/slides/image1.jpg" alt="slideshow image" id="myimage">
+                </div>
+                <a href="#" id="open">Click Me! (User Test)</a>
+            </div>
+            <div id="ol" class="overlay hidden">
+                <article>
+                    <h3>&#183; Thank you &#183;</h3>
+                    <p>
+                        Welcome tester! First, thank you for taking the time to test out my final project.
+                        This website is a "thank you" to my family and friends who have supported me throughout my
+                        univeristy journey. Every person who is highlighed here has impacted my life. I can't say thank
+                        you enough because without them, I truly would not be where I am today. This project is
+                        dedicated to them. &#10084
+                    </p>
+                    <p>
+                        I would greatly appreciate if you would perform the following tasks and tell me your opinion:
+                        <br/>
+                        1. Scroll through each section and ensure that the background color changes.
+                        <br/>
+                        2. Hover over the "thank you(s)" and click on them. When you click on a thank you, it should automatically scroll to that section (person).
+                        <br/>
+                        3. Click on the image of each section and a personalized "thank you" card to that person should appear. I have not yet written the messages, thus you will see a random message as a placeholder.
+                    </p>
+                    <button id="close">Close</button>
+                </article>
+            </div>
+        </header>
+        <main>
+            <section id="family">
+                <div class="name-container" id="name-one">
+                    <h2>My <span>Family</span></h2>
+                </div>
+                <div class="ty-msg-container" id="ty-card-one">
+                    <h3>&#183; Thank you &#183;</h3>
+                    <p>
+                        ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <button class="back">Back</button>
+                </div>
+                <img id="one" alt="family" src="images/family/fam.png">
+            </section>
+
+            <section id="cat">
+                <img id="two" alt="catalina" src="images/cat/cat.png">
+                <div class="name-container" id="name-two">
+                    <h2><span>Catalina</span> Navarro</h2>
+                </div>
+                <div class="ty-msg-container" id="ty-card-two">
+                    <h3>&#183; Thank you &#183;</h3>
+                    <p>
+                        ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <button class="back">Back</button>
+                </div>
+            </section>
+
+            <section id="keana">
+                <div class="name-container" id="name-three">
+                    <h2><span>Keana</span> Delos Santos</h2>
+                </div>
+                <div class="ty-msg-container" id="ty-card-three">
+                    <h3>&#183; Thank you &#183;</h3>
+                    <p>
+                        ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <button class="back">Back</button>
+                </div>
+                <img id="three" alt="keana" src="images/keana/keana.png">
+            </section>
+
+            <section id="briley">
+                <img id="four" alt="briley" src="images/briley/briley.png">
+                <div class="name-container" id="name-four">
+                    <h2><span>Briley</span> Wong</h2>
+                </div>
+                <div class="ty-msg-container" id="ty-card-four">
+                    <h3>&#183; Thank you &#183;</h3>
+                    <p>
+                        ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <button class="back">Back</button>
+                </div>
+            </section>
+
+            <section id="tiana">
+                <div class="name-container" id="name-five">
+                    <h2><span>Kristiana</span> Sunga</h2>
+                </div>
+                <div class="ty-msg-container" id="ty-card-five">
+                    <h3>&#183; Thank you &#183;</h3>
+                    <p>
+                        ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <button class="back">Back</button>
+                </div>
+                <img id="five" alt="tiana" src="images/tiana/tiana.png">
+            </section>
+
+            <section id="zechariah">
+                <div class="name-container" id="name-six">
+                    <h2><span>Zechariah</span> Orme</h2>
+                </div>
+                <div class="ty-msg-container" id="ty-card-six">
+                    <h3>&#183; Thank you &#183;</h3>
+                    <p>
+                        ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <button class="back">Back</button>
+                </div>
+                <img id="six" alt="zechariah" src="images/zech/zechariah.png">
+            </section>
+        </main>
+        <footer>
+            <nav>
+                <a href="mailto:amrrodriguez@ucdavis.edu">Email</a>
+                <a
+                    href="https://validator.w3.org/check?uri=https://alyssamarie0107.github.io/des157/final/finalproject">Valid
+                    HTML5</a>
+                <a
+                    href="http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Falyssamarie0107.github.io/des157/final/finalproject%2F">Valid
+                    CSS</a>
+            </nav>
+        </footer>
+    </div>
+    <!-- polyfill for safari -->
+    <!-- <script src="smoothscroll.js"></script> -->
+</body>
+
+</html>
