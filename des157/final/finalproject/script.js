@@ -1,5 +1,5 @@
-(function(){
-    'use strict'; 
+(function () {
+    'use strict';
 
     // -----------------------
     // JS for slideshow
@@ -13,25 +13,25 @@
         "image5.jpg",
         "image6.jpg"
     ]
- 
+
     const container = document.querySelector('#content');
- 
-     setInterval(function(){
-         currImg++;
-         if (currImg > (myPhotos.length - 1)) {
-             currImg = 0;
-         }
-         swapImage();
-    },2000);
- 
+
+    setInterval(function () {
+        currImg++;
+        if (currImg > (myPhotos.length - 1)) {
+            currImg = 0;
+        }
+        swapImage();
+    }, 2000);
+
     function swapImage() {
         let newSlide = document.createElement('img');
         newSlide.src = `images/slides/${myPhotos[currImg]}`;
         newSlide.className = "fadeinimg";
         container.appendChild(newSlide);
- 
+
         // never want more than two img elements 
-        if(container.children.length > 2) {
+        if (container.children.length > 2) {
             // remove element 0 which is the bottom one
             container.removeChild(container.children[0]);
         }
@@ -40,16 +40,16 @@
     // end of JS for slideshow 
     // -----------------------
 
-    // -----------------------
-    // JS for smooth scrolling
-    // -----------------------
+    // ----------------------------------------------------------
+    // JS for smooth scrolling when user clicks on a "thank you"
+    // ----------------------------------------------------------
     const navLinks = document.querySelectorAll('nav ul li a');
 
-    navLinks.forEach(function(eachLink){
+    navLinks.forEach(function (eachLink) {
         eachLink.addEventListener('click', smoothScroll);
     });
 
-    function smoothScroll(event){
+    function smoothScroll(event) {
         event.preventDefault();
 
         const targetID = event.target.getAttribute('href');
@@ -58,50 +58,97 @@
         // console.log(targetAnchor.getBoundingClientRect().top);
 
         const originalTop = Math.floor(targetAnchor.getBoundingClientRect().top);
-        window.scrollBy({top: originalTop, left:0, behavior: 'smooth'});
+        window.scrollBy({
+            top: originalTop,
+            left: 0,
+            behavior: 'smooth'
+        });
     }
-    // ------------------------------
-    // end of JS for smooth scrolling
-    // ------------------------------
+    // ---------------------------------------------------------------
+    // end of JS for smooth scrolling when user clicks on a "thank you"
+    // ---------------------------------------------------------------
 
-    // -----------------------
-    // JS for overlay
-    // -----------------------
+    // ----------------------------
+    // JS for about website overlay
+    // ----------------------------
     const openBtn = document.querySelector('#open');
     const closeBtn = document.querySelector('#close');
 
 
-    openBtn.addEventListener('click', function(event){
+    openBtn.addEventListener('click', function (event) {
         event.preventDefault();
         document.querySelector('#ol').className = 'overlay showing';
     });
 
-    closeBtn.addEventListener('click', function(event){
+    closeBtn.addEventListener('click', function (event) {
         event.preventDefault();
 
         document.querySelector('.showing').className = 'overlay hidden';
     });
 
-    document.addEventListener('keydown', function(event){
-        if(event.key == "Escape"){
+    document.addEventListener('keydown', function (event) {
+        if (event.key == "Escape") {
             document.querySelector('.showing').className = 'overlay hidden';
         }
     });
+    // -----------------------------------
+    // end of JS for about website overlay
+    // -----------------------------------
 
-    // -----------------------
-    // JS for pictures
-    // -----------------------
-    document.querySelector('#zech-img').addEventListener('click', function(){
-        document.querySelector('.picture-container').style.display = "flex";
-        document.querySelector('#zechariah .name-container').style.display = "none";
-    });
+    // ----------------------------------------------
+    // JS for displaying personalized thank you cards
+    // ----------------------------------------------
+    const imgs = document.querySelectorAll('section img');
 
- }());
+    for (const eachImg of imgs) {
+        eachImg.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            const thisImg = event.target.id;
+
+            document.querySelector(`#ty-card-${thisImg}`).style.display = "flex";
+            document.querySelector(`#name-${thisImg}`).style.display = "none";
+
+            const backBtns = document.querySelectorAll('.back');
+
+            for (const eachBackBtn of backBtns) {
+                eachBackBtn.addEventListener('click', function () {
+                    document.querySelector(`#ty-card-${thisImg}`).style.display = "none";
+                    document.querySelector(`#name-${thisImg}`).style.display = "flex";
+                });
+            }
+        });
+    }
+    // ------------------------------------------------------
+    // end of JS for displaying personalized thank you cards
+    // ------------------------------------------------------
+
+    // ---------------------------------------------
+    // JS for hovering over name and display collage
+    // ---------------------------------------------
+    const names = document.querySelectorAll('.name-container');
+
+    for (const eachName of names) {
+        eachName.addEventListener('mouseenter', function (event) {
+            event.preventDefault();
+
+            const thisName = event.target.id;
+
+            document.querySelector(`#collage-${thisName}`).style.display = "flex";
+            document.querySelector(`#${thisName}`).style.display = "none";
+
+            document.querySelector(`#collage-${thisName}`).addEventListener('mouseleave', function () {
+                document.querySelector(`#collage-${thisName}`).style.display = "none";
+                document.querySelector(`#${thisName}`).style.display = "flex";
+            });
+        });
+    }
+}());
 
 // ------------------------------------------
 // JS for changing background color on scroll
 // ------------------------------------------
-window.addEventListener('load', function(){
+window.addEventListener('load', function () {
     'use strict';
     const posts = document.querySelectorAll('section');
     console.log(posts);
@@ -120,20 +167,20 @@ window.addEventListener('load', function(){
         "#c5c5c5"
     ];
 
-    posts.forEach(function(post){
+    posts.forEach(function (post) {
         postTops.push(Math.floor(post.getBoundingClientRect().top) + window.pageYOffset)
     });
     console.log(postTops);
 
-    window.addEventListener('scroll', function(event){
+    window.addEventListener('scroll', function (event) {
         pagetop = window.pageYOffset + 50;
         console.log(pagetop);
 
-        if(pagetop > postTops[counter]) {
+        if (pagetop > postTops[counter]) {
             // scrolling down
             counter++;
             console.log(`scrolling down ${counter}`);
-        } else if(counter > 1 && pagetop < postTops[counter - 1]) {
+        } else if (counter > 1 && pagetop < postTops[counter - 1]) {
             // scrolling up
             counter--;
             console.log(`scrolling up ${counter}`);
@@ -146,9 +193,8 @@ window.addEventListener('load', function(){
         if (pagetop < postTops[0]) {
             console.log("hello");
             document.querySelector('body').style.backgroundColor = "#FFFFFF";
-        }
-        else {
-            document.querySelector('body').style.backgroundColor = colors[counter-1];
+        } else {
+            document.querySelector('body').style.backgroundColor = colors[counter - 1];
         }
     });
 });

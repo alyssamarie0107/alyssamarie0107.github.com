@@ -14,14 +14,17 @@ header {
     /* background-color: brown; */
 }
 
-header > nav > ul{
+header>nav>ul {
     padding: 0;
     list-style-type: none;
     margin-right: 100px;
     /* background-color: burlywood; */
 }
 
-a, button{text-decoration: none;}
+a,
+button {
+    text-decoration: none;
+}
 
 button {
     width: 80px;
@@ -30,6 +33,7 @@ button {
     border-radius: 10px;
     cursor: pointer;
     margin-top: 10px;
+    text-transform: uppercase;
 }
 
 img {
@@ -50,18 +54,23 @@ h2 {
     -webkit-text-stroke-color: black;
 }
 
-li>a {font-size: 120px;}
+li>a {
+    font-size: 120px;
+}
 
 li>a:hover {
     cursor: pointer;
 }
 
-h2, h3 {
+h2,
+h3 {
     text-align: center;
     margin: 0;
 }
 
-h2 {font-size: 100px;}
+h2 {
+    font-size: 100px;
+}
 
 h3 {
     font-size: 30px;
@@ -142,7 +151,9 @@ footer>nav>a {
     -webkit-text-fill-color: #c9c28a;
 }
 
-#ty7 {margin-bottom: 0;}
+#ty7 {
+    margin-bottom: 0;
+}
 
 #ty7:hover {
     -webkit-text-stroke-color: #c5c5c5;
@@ -163,7 +174,7 @@ footer>nav>a {
     font-size: 16px;
     font-weight: bold;
     font-family: 'Shadows Into Light', cursive;
-    margin: 20px 0 20px 0;
+    margin-bottom: 25px;
     background-color: black;
 }
 
@@ -178,11 +189,11 @@ footer>nav>a {
     position: absolute;
     left: 0;
     top: 0;
-    width: 380px;
-    height: 400px;
 }
 
-#family {margin-top: 100px;}
+#family {
+    margin-top: 100px;
+}
 
 .name-container {
     display: flex;
@@ -190,16 +201,30 @@ footer>nav>a {
     /* background-color: darkseagreen; */
 }
 
-.name-container>h2 {
-    margin-bottom: 60px;
+.name-container>h2,
+.ty-msg-container,
+.collage-container {
+    margin: 60px;
 }
 
-.picture-container {
-    width: 50vw;
+.ty-msg-container {
+    display: none;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: #202020;
+    padding: 20px;
+    background-color: #202020;
+}
+
+.collage-container {
     display: none;
     align-items: center;
-    /* background-color: cadetblue; */
 }
+
+.collage-container>img {margin: 8px;}
 
 /************ overlay CSS ************/
 .hidden {
@@ -214,7 +239,7 @@ footer>nav>a {
 
 .overlay {
     position: absolute;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     top: 0;
     left: 0;
     width: 100vw;
@@ -239,7 +264,8 @@ footer>nav>a {
     transform: translate(-50%, -50%);
 }
 
-.overlay article>p {
+.overlay article>p,
+.ty-msg-container>p {
     width: 5.5in;
     font-size: 14px;
     line-height: 1.5;
