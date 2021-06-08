@@ -114,16 +114,8 @@ footer>nav>a {
 .left,
 .right {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
 }
-
-/* .left {
-    background-color: turquoise;
-}
-
-.right {
-    background-color: wheat;
-} */
 
 .left>img,
 .right>img {
@@ -267,9 +259,13 @@ footer>nav>a {
     /* background-color: teal; */
 }
 
-#collage-name-four {flex-direction: column;}
+#collage-name-four {
+    flex-direction: column;
+}
 
-#collage-name-four>div {display: flex;}
+#collage-name-four>div {
+    display: flex;
+}
 
 /************ overlay CSS ************/
 .hidden {
